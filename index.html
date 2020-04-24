@@ -1,36 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+	<head>
+		<title>Login Page</title>
+		<script language="javascript" src="script.js"></script>
+		<meta charset="utf-8"> <!-- permite acentuação-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
 
-  <head>
-	<meta charset="utf-8">
-    <title>Main Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
- 
-  <body>
-		<!--conteudo vem aqui -->
-	  	<header>
-			<div class="container">
-	  			<img id="imgLogo" src="logo.png">
-	  		</div>
-	  	</header>
+		<center>		
+		<form name=login>
+		<table width=213 border=0 cellpadding=3 height="161">
 
-	  	<div id="div_principal">
-	  		<br>
-	  		<div class="efeito">
-		  		<div class="container">
-			  		<h1>Welcome to my page </h1>
-			  		  <p>
-			  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa quam, sollicitudin et augue sit amet, pharetra fringilla magna. In ultricies efficitur luctus. Phasellus convallis odio eget lorem pretium vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tellus et elit dictum, vel malesuada massa pulvinar. Phasellus vitae pharetra leo. Sed a dolor semper, facilisis nisi non, porta risus. Aenean congue justo quis ex consectetur dictum. Integer et feugiat nulla. Integer nec blandit nisi. Fusce lobortis felis eu ultricies accumsan. Morbi luctus, ante eget venenatis scelerisque, leo nibh blandit risus, eu aliquet tortor ante quis elit. Nam quis magna commodo, lobortis mauris eget, varius tortor. Morbi non egestas tortor.
-			  		 </p>
-		  		</div>
-	  		</div>
-	  		<br>
-	  	</div>
-	  	
-	  	<footer> 
-	  		Developed by Alaf N. Santos 
-	  	</footer>
-  </body>
+			<tr>
+				<td colspan=2 height="31">
+					<center>
+			  			<p>
+			  				<font face="Comic Sans MS">Do you have a key?</font>
+			  			</p>
+			  		</center>
+				</td>
+			</tr>
+			
 
+			<tr>
+
+			  <td width="73" height="30"><p align="right">
+			  	<font face="Comic Sans MS" style="font-size: 8pt; font-weight:700">User:</font>
+			  </td>
+
+			  <td width="120" height="30" align="center">
+			  	<input type=text name=username size="20" onkeypress="return bloqEnter(event)" onkeypress="checar_caps_lock(event)"/>
+			  </td>
+
+			</tr>
+			
+			<tr>
+				<td height="30"><p align="right">
+					<font style="font-size: 8pt" face="Comic Sans MS"><b>Key:</b>:</font>
+				</td>
+
+				<td height="30">
+			  		<input name=password type=password size="20" maxlength="10" onkeypress="return noEnter(event)" />
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan=2 align=center height="34"><input type=button value="login" onClick="checkUser()">
+			</tr>
+
+		
+		</table>
+		</form>
+		</center>
+
+		<p>
+
+		<p align="center" style="margin-top: 0; margin-bottom: 0"> </p>
+
+	</body>
 </html>
