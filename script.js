@@ -5,17 +5,17 @@ function checkUser()
 	password=password.toLowerCase();
 	if (username=="alaf" && password=="12345678")
 	{
-		window.location="index.html"; 
+		window.location="page2.html"; 
 		done=1;
 	}
 	if (username=="lucas" && password=="abcdefgh")
 	{
-		window.location="index.html"; 
+		window.location="page2.html"; 
 		done=1;
 	}
 	if (username=="joao" && password=="qwertyui")
 	{
-		window.location="index.html"; 
+		window.location="page2.html"; 
 		done=1;
 	}
 	if (done==0)
