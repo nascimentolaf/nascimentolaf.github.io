@@ -1,2 +1,2 @@
 # alafSantos.github.io
-HTML5 + CSS3
+JS1 on web
