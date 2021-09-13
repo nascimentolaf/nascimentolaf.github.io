@@ -1,1 +1,55 @@
-<!DOCTYPE html><html><head><base href=/ ><title>SupervisoryControl</title><meta charset=utf-8><meta name=description content="Supervisorio de Manutencao, dados fora do HUCAM"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"><link rel=icon type=image/png href=statics/app-logo-128x128.png><link rel=icon type=image/png sizes=16x16 href=statics/icons/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=statics/icons/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=statics/icons/favicon-96x96.png><link rel=icon type=image/ico href=statics/icons/favicon.ico><link href=/css/app.14ab7aee.css rel=stylesheet></head><body><div id=q-app></div><script src=/js/vendor.82043403.js></script><script src=/js/app.f840f860.js></script><script src=/js/runtime.3e3933b1.js></script></body></html>
+ <html>
+   <head>
+    </head>
+       <body>
+      <form id="formulario">
+        <fieldset>
+        <legend>Desenvolvimento de Aplicação Multiplataforma para Recepção de Dados Codificados via Luz por Meio de Dispositivo Plug-and-Play.</legend>
+
+        <a href="#" onclick="serialRead()">LER USB</a>
+        </fieldset>
+  </form></body></html>
+
+<script type="text/javascript">  
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function serialRead()
+  {
+      if ("serial" in navigator) 
+      {
+        // The Web Serial API is supported.
+        const port = await navigator.serial.requestPort(); // Prompt user to select any serial port.
+        await port.open({ baudRate: 9600 });
+        await sleep(500);
+
+        while (port.readable) 
+        {
+          const reader = port.readable.getReader();
+
+          try 
+          {
+            while (true)
+            {
+              const { value, done } = await reader.read();
+              if (done)
+              {
+                // |reader| has been canceled.
+                 break;
+              }
+              console.log(value[0])
+            }
+            } 
+            catch (error) {
+              // Handle |error|...
+            } 
+            finally 
+            {
+              reader.releaseLock();
+            }
+        }
+        await port.close();         
+      }
+  }
+</script>
