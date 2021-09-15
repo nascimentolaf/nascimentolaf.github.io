@@ -1,30 +1,106 @@
-function checkUser()
-{
-	var username = document.login.username.value, password = document.login.password.value, done = 0;
-	username=username.toLowerCase();
-	password=password.toLowerCase();
-	if (username=="alaf" && password=="12345678")
-	{
-		window.location="page2.html"; 
-		done=1;
-	}
-	if (username=="lucas" && password=="abcdefgh")
-	{
-		window.location="page2.html"; 
-		done=1;
-	}
-	if (username=="joao" && password=="qwertyui")
-	{
-		window.location="page2.html"; 
-		done=1;
-	}
-	if (done==0)
-		alert("error: try again");
-}
+var randomScalingFactor = function() {
+  return Math.round(Math.random() * 100);
+};
 
-function noEnter(objEvent) 
-{
-	var iKeyCode = objEvent.keyCode;
-	if(iKeyCode == 13) return false;
-	else return true;
-}
+var randomData = function () {
+  return [
+    randomScalingFactor(),
+    randomScalingFactor(),
+    randomScalingFactor(),
+    randomScalingFactor()
+  ];
+};
+
+var randomValue = function (data) {
+  return Math.max.apply(null, data) * Math.random();
+};
+
+var randomScalingFactor = function() {
+  return Math.round(Math.random() * 100);
+};
+
+var randomData = function () {
+  return [
+    randomScalingFactor(),
+    randomScalingFactor(),
+    randomScalingFactor(),
+    randomScalingFactor()
+  ];
+};
+
+var randomValue = function (data) {
+  return Math.max.apply(null, data) * Math.random();
+};
+
+var data = randomData();
+var value = randomValue(data);
+
+var config = {
+  type: 'gauge',
+  data: {
+    labels: ['Deu ruim','Cuidado, pls','Ta +/-','Deu bom'],
+    datasets: [{
+      data: data,
+      value: value,
+      backgroundColor: ['red', 'orange', 'yellow', 'green'],
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Testando Charjs para Medidor do Ricardo'
+    },
+    layout: {
+      padding: {
+        bottom: 30
+      }
+    },
+    needle: {
+      // Needle circle radius as the percentage of the chart area width
+      radiusPercentage: 2,
+      // Needle width as the percentage of the chart area width
+      widthPercentage: 3.2,
+      // Needle length as the percentage of the interval between inner radius (0%) and outer radius (100%) of the arc
+      lengthPercentage: 80,
+      // The color of the needle
+      color: 'rgba(0, 0, 0, 1)'
+    },
+    valueLabel: {
+      formatter: Math.round
+    },
+    plugins: {
+      datalabels: {
+        display: true,
+        formatter: function (value, context) {
+          return context.chart.data.labels[context.dataIndex];//'< ' + Math.round(value);
+        },
+        color: function (context) {
+          return context.dataset.backgroundColor;
+        },
+        color: 'rgba(255, 255, 255, 1.0)',
+        backgroundColor: 'rgba(0, 0, 0, 1.0)',
+        borderWidth: 0,
+        borderRadius: 5,
+        font: {
+          weight: 'bold'
+        }
+      }
+    }
+  }
+};
+
+window.onload = function() {
+  var ctx = document.getElementById('chart').getContext('2d');
+  window.myGauge = new Chart(ctx, config);
+};
+
+document.getElementById('randomizeData').addEventListener('click', function() {
+  config.data.datasets.forEach(function(dataset) {
+    dataset.data = randomData();
+    dataset.value = randomValue(dataset.data);
+  });
+
+  window.myGauge.update();
+});

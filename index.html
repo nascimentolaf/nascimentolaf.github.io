@@ -1,62 +1,20 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Login Page</title>
-		<script language="javascript" src="script.js"></script>
-		<meta charset="utf-8"> <!-- permite acentuação-->
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste Chartjs</title>
+  <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+  <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
+  <script src="https://unpkg.com/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.js"></script>
+  <script language="javascript" src="script.js"></script>
+</head>
 
-		<center>		
-		<form name=login>
-		<table width=213 border=0 cellpadding=3 height="161">
-
-			<tr>
-				<td colspan=2 height="31">
-					<center>
-			  			<p>
-			  				<font face="Comic Sans MS">Do you have a key?</font>
-			  			</p>
-			  		</center>
-				</td>
-			</tr>
-			
-
-			<tr>
-
-			  <td width="73" height="30"><p align="right">
-			  	<font face="Comic Sans MS" style="font-size: 8pt; font-weight:700">User:</font>
-			  </td>
-
-			  <td width="120" height="30" align="center">
-			  	<input type=text name=username size="20" onkeypress="return bloqEnter(event)" onkeypress="checar_caps_lock(event)"/>
-			  </td>
-
-			</tr>
-			
-			<tr>
-				<td height="30"><p align="right">
-					<font style="font-size: 8pt" face="Comic Sans MS"><b>Key:</b>:</font>
-				</td>
-
-				<td height="30">
-			  		<input name=password type=password size="20" maxlength="10" onkeypress="return noEnter(event)" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td colspan=2 align=center height="34"><input type=button value="login" onClick="checkUser()">
-			</tr>
-
-		
-		</table>
-		</form>
-		</center>
-
-		<p>
-
-		<p align="center" style="margin-top: 0; margin-bottom: 0"> </p>
-
-	</body>
+<body>
+  <div id="canvas-holder" style="width:70%">
+  <canvas id="chart"></canvas>
+  </div>
+</body>
 </html>
+
