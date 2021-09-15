@@ -38,7 +38,7 @@ var value = randomValue(data);
 var config = {
   type: 'gauge',
   data: {
-    labels: ['Deu ruim','Cuidado, pls','Ta +/-','Deu bom'],
+    labels: ['Pegou Fogo','Cuidado!','Ainda OK','Está Seguro'],
     datasets: [{
       data: data,
       value: value,
@@ -50,7 +50,7 @@ var config = {
     responsive: true,
     title: {
       display: true,
-      text: 'Testando Charjs para Medidor do Ricardo'
+      text: 'Testando Charjs para Medidor'
     },
     layout: {
       padding: {
