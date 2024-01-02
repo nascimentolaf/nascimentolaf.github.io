@@ -50,6 +50,11 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
+    title: 'CV',
+    icon: 'school',
+    link: '/#/CV'
+  },
+  {
     title: 'Linkedin',
     icon: 'chat',
     link: 'https://www.linkedin.com/in/alafsantos'
@@ -60,14 +65,14 @@ const linksList = [
     link: 'https://github.com/alafSantos'
   },
   {
-    title: 'Lattes Curriculum',
-    icon: 'school',
-    link: 'http://lattes.cnpq.br/4461462146153067'
-  },
-  {
     title: 'ORCID',
     icon: 'record_voice_over',
     link: 'https://orcid.org/0000-0002-5469-3872'
+  },
+  {
+    title: 'Lattes Curriculum',
+    icon: 'info',
+    link: 'http://lattes.cnpq.br/4461462146153067'
   }
 ]
 
