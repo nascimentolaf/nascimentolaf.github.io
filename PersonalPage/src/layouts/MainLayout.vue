@@ -57,12 +57,12 @@ const linksList = [
   {
     title: 'Linkedin',
     icon: 'chat',
-    link: 'https://www.linkedin.com/in/alafsantos'
+    link: 'https://www.linkedin.com/in/dnsalaf'
   },
   {
     title: 'Github',
     icon: 'code',
-    link: 'https://github.com/alafSantos'
+    link: 'https://github.com/dnsalaf'
   },
   {
     title: 'ORCID',

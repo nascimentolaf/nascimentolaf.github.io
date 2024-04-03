@@ -22,8 +22,7 @@
             <p>About me</p>
           </b>
           <hr>
-          Passionate master's student in electrical engineering with a background in telecommunications and automation,
-          with a history of presenting at conferences and writting research papers, principally in the area of the
+          Passionate master's student in electrical engineering with a background in telecommunications and automation, holding a history of presenting at conferences and writting research papers, principally in the area of the
           Internet of Things (IoT). Throughout my career I have received awards in maths, physics and recently a
           scholarship based on academic and technical excellence. I am currently seeking a Ph.D. programme in Engineering
           aiming to delve further into the IoT world and Digital Twins.
@@ -102,22 +101,17 @@
             <p>Education</p>
           </b>
           <hr>
-          2022 – 2024 - Master of Science in Engineering.
-          Télécom Paris, Polytechnic Institute of Paris, Palaiseau, France. Double degree programme.
-          M1: Embedded systems, mobile networks, and the internet of things.
-          M2: Embedded systems and information processing.
-          Research project: Modelling critical real-time execution for 5G base stations.
-          Relevant Modules: Reconfigurable architectures and HDL languages (FPGA, SystemVerilog, and VHDL), Rust,
-          Concurrent programming, Microprocessor-based systems, IoT Protocols and Systems, Wireless IoT, Mobile networks
-          and virtualisation, Embedded Linux, Embedded AI, Real-time Systems, Language Processing.
+          2022 – 2024 - Master of Science in Engineering.<br>
+          Télécom Paris, Polytechnic Institute of Paris, Palaiseau, France. Double degree programme.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;M1: Embedded systems, mobile networks, and the internet of things.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;M2: Embedded systems and information processing.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Master project: Modelling the critical real-time execution of a 5G base station.
 
-          <br>
-          2017 – 2024 - Bachelor of Science in Electrical Engineering.
-          Federal University of Espírito Santo, Vitória, Brazil. Double degree programme.
-          Control and automation systems, telecommunications, and computer science.
-          Final Project: Multiplatform System For Data Reception Via Visible Light Communication Technology.
-          Relevant Modules: Embedded Systems, Computer Architecture, Digital Systems, Computer Networks,
-          Telecommunications Systems, Dynamical Systems, Mobile Robotics, Computer vision, Oriented IoT Project.
+          <br><br>
+          2017 – 2024 - Bachelor of Science in Electrical Engineering.<br>
+          Federal University of Espírito Santo, Vitória, Brazil. Double degree programme.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Control and automation systems, telecommunications, and computer science.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Final Project: Multiplatform System For Data Reception Via Visible Light Communication Technology.
 
           <br><br>
           <b>
@@ -270,10 +264,13 @@ export default defineComponent({
         "SANTOS, A., JUNIOR, L., JARDIM, I., 2020. Low - Cost Module for Supervisory System of Hospital Substations.In: Congresso Internacional Online das Engenharias."
       ],
       research: [
-        "Digital Twins",
+        "Real-time systems",
+        "Embedded Software",
+        "Embedded Artificial Intelligence",
+        "Mobile Networks",
         "Internet of Things",
-        "Visible Light Communication and Mobile Networks",
-        "Embedded Software and Artificial Intelligence"
+        "Visible Light Communication",
+        "Digital Twins",
       ]
     };
   }
