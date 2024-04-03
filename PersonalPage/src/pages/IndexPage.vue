@@ -3,16 +3,16 @@
 
     <div class="q-gutter-md text-container">
 
-      
+
       <div class="image-container q-mb-md">
         <div class="flex-container">
           <img alt="Photo" src="https://avatars.githubusercontent.com/u/42941626" class="responsive-image">
-  
+
           <div class="text">
             <p class="responsive-text">{{ me }}</p>
             <p class="responsive-text2">{{ field }}</p>
             <p class="responsive-text2">{{ degree }}</p>
-            
+
           </div>
         </div>
 
@@ -22,9 +22,11 @@
             <p>About me</p>
           </b>
           <hr>
-          Passionate master's student in electrical engineering with a background in telecommunications and automation, holding a history of presenting at conferences and writting research papers, principally in the area of the
+          Passionate master's student in electrical engineering with a background in telecommunications and automation,
+          holding a history of presenting at conferences and writting research papers, principally in the area of the
           Internet of Things (IoT). Throughout my career I have received awards in maths, physics and recently a
-          scholarship based on academic and technical excellence. I am currently seeking a Ph.D. programme in Engineering
+          scholarship based on academic and technical excellence. I am currently seeking a Ph.D. programme in
+          Engineering
           aiming to delve further into the IoT world and Digital Twins.
 
           <br><br>
@@ -38,80 +40,34 @@
             </li>
           </ul>
 
-          <b>
-            <p>Experience</p>
-          </b>
-          <hr>
-          2024 - Embedded Systems and IoT Intern.
-          Orange S.A., Meylan, France.
-          Development of an application for remote access to Matter devices.
-          Embedded software for an IoT gateway based on ARM Cortex-A processor.
+          <div>
+            <b>
+              <p>Experience</p>
+            </b>
+            <hr>
+            <div v-for="(exp, index) in experience" :key="index">
+              <p>{{ exp.duration }} - {{ exp.position }}</p>
+              <p>{{ exp.company }}, {{ exp.location }}</p>
+              <ul>
+                <li v-for="(detail, index) in exp.details" :key="index">{{ detail }}</li>
+              </ul>
+              <br>
+            </div>
+          </div>
 
-          <br>
-          2023 - Network and Automation Intern.
-          Synchrotron SOLEIL, Saint-Aubin, France.
-          Software tool parameterisation dedicated to centralised supervision of Siemens PLCs (S7-3xx and S7-15xx).
-          Coverage of over 98 % of the targeted devices, through a solution based on the S7 and SNMP protocols.
-          Real-time monitoring tool: Zabbix;
-          Programming languages: Python, C/C++, and CMake.
-
-          <br>
-          2021 – 2022 - Embedded Systems and IoT R&D intern.
-          2Solve Engineering and Technology, Vitória, Brazil.
-          Development of software for embedded systems, IoT Web Applications, and technical documentation.
-          Embedded systems based on Raspberry Pi and SAMD21.
-          Programming languages: Javascript, Python, C/C++, and CMake.
-          Dev tools: NodeJS, AngularJS, InfluxDB, and MongoDB.
-          IoT tools: Node-RED and Grafana.
-          Research project:
-          Design of an OOK transmitter for short-link visible light data communication.
-
-          <br>
-          2019 – 2021 - Scientific and Technological Undergraduate Researcher.
-          UFES Telecommunications Laboratory (LabTel), Vitória, Brazil.
-          Software and hardware design for visible light communication systems (VLC systems).
-          Dev tools: Android Studio, NodeJS, VueJS.
-          Programming languages: MatLab, Java, Python, and C++.
-          Research projects:
-          Application of Visible Light Communication Technology in Monitoring High-Risk Newborns;
-          SmaL: Smartphone Receiver for Coded Data via Light.
-          Publications: [1], and [2].
-
-          <br>
-          2019 – 2020 - Automation Intern.
-          Cassiano Antonio Moraes University Hospital (HUCAM), Vitória, Brazil.
-          Establishment of electronics for a supervisory system, data monitoring app, and creating technical
-          documentation.
-          Embedded systems based on Raspberry Pi, Arduino, and ESP8266.
-          Real-time monitoring tool: Zabbix.
-          Programming languages: Python, Javascript, and C++.
-          Publications: [4]
-
-          <br>
-          2019 - Scholar in educational programme.
-          Tutorial Teaching Program (PET), Vitória, Brazil.
-          Software training, such as LaTex. Research about embedded systems. Production of scientific articles.
-          Embedded systems based on Raspberry Pi and Arduino;
-          Programming languages: MatLab, Python and C/C++.
-          Publications: [3]
-
-
-          <br><br>
-          <b>
-            <p>Education</p>
-          </b>
-          <hr>
-          2022 – 2024 - Master of Science in Engineering.<br>
-          Télécom Paris, Polytechnic Institute of Paris, Palaiseau, France. Double degree programme.<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;M1: Embedded systems, mobile networks, and the internet of things.<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;M2: Embedded systems and information processing.<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Master project: Modelling the critical real-time execution of a 5G base station.
-
-          <br><br>
-          2017 – 2024 - Bachelor of Science in Electrical Engineering.<br>
-          Federal University of Espírito Santo, Vitória, Brazil. Double degree programme.<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Control and automation systems, telecommunications, and computer science.<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;Final Project: Multiplatform System For Data Reception Via Visible Light Communication Technology.
+          <div>
+            <b>
+              <p>Education</p>
+            </b>
+            <hr>
+            <div v-for="(edu, index) in education" :key="index">
+              <p>{{ edu.duration }} - {{ edu.degree }}</p>
+              <p>{{ edu.institution }}</p>
+              <ul>
+                <li v-for="(detail, index) in edu.details" :key="index">{{ detail }}</li>
+              </ul>
+            </div>
+          </div>
 
           <br><br>
           <b>
@@ -120,7 +76,7 @@
           <hr>
           <ul>
             <li v-for="(item, index) in pubs" :key="index">
-             [{{ index + 1 }}] {{ item }}
+              [{{ index + 1 }}] {{ item }}
             </li>
           </ul>
 
@@ -150,7 +106,8 @@
           <br>
           2016 - Honorable Mention Brazilian Public School Mathematics Olympiad.
           Institute of Pure and Applied Mathematics (IMPA), Rio de Janeiro, Brazil.
-          Stood out in mathematics at this Olympiad, being the only high school student out of around 500 in the school to
+          Stood out in mathematics at this Olympiad, being the only high school student out of around 500 in the school
+          to
           receive this award.
 
           <br>
@@ -271,6 +228,107 @@ export default defineComponent({
         "Internet of Things",
         "Visible Light Communication",
         "Digital Twins",
+      ],
+      education: [
+        {
+          duration: "2022 – 2024",
+          degree: "Master of Science in Engineering",
+          institution: "Télécom Paris, Polytechnic Institute of Paris, Palaiseau, France. Double degree programme.",
+          details: [
+            "M1: Embedded systems, mobile networks, and the internet of things.",
+            "M2: Embedded systems and information processing.",
+            "Master project: Modelling the critical real-time execution of a 5G base station."
+          ]
+        },
+        {
+          duration: "2017 – 2024",
+          degree: "Bachelor of Science in Electrical Engineering",
+          institution: "Federal University of Espírito Santo, Vitória, Brazil. Double degree programme.",
+          details: [
+            "Control and automation systems, telecommunications, and computer science.",
+            "Final Project: Multiplatform System For Data Reception Via Visible Light Communication Technology."
+          ]
+        }
+      ],
+      experience: [
+        {
+          duration: "2024",
+          position: "Embedded Systems and IoT Intern.",
+          company: "Orange S.A.",
+          location: "Meylan, France",
+          details: [
+            "Development of an application for remote access to Matter devices.",
+            "Embedded software for an IoT gateway based on ARM Cortex-A processor."
+          ]
+        },
+        {
+          duration: "2023",
+          position: "Network and Automation Intern",
+          company: "Synchrotron SOLEIL",
+          location: "Saint-Aubin, France",
+          details: [
+            "Software tool parameterization dedicated to centralized supervision of Siemens PLCs (S7-3xx and S7-15xx).",
+            "Coverage of over 98% of the targeted devices, through a solution based on the S7 and SNMP protocols.",
+            "Real-time monitoring tool: Zabbix;",
+            "Programming languages: Python, C/C++, and CMake."
+          ]
+        },
+        {
+          duration: "2021 – 2022",
+          position: "Embedded Systems and IoT R&D intern",
+          company: "2Solve Engineering and Technology",
+          location: "Vitória - ES, Brazil",
+          details: [
+          "Development of software for embedded systems, IoT Web Applications, and technical documentation.",
+          "Embedded systems based on Raspberry Pi and SAMD21.",
+          "Programming languages: Javascript, Python, C/C++, and CMake.",
+          "Dev tools: NodeJS, AngularJS, InfluxDB, and MongoDB.",
+          "IoT tools: Node-RED and Grafana.",
+          "Research project: Design of an OOK transmitter for short-link visible light data communication."
+          ]
+        },
+        {
+          duration: "2019 – 2021",
+          position: "Scientific and Technological Undergraduate Researcher",
+          company: "UFES Telecommunications Laboratory (LabTel)",
+          location: "Vitória, Brazil",
+          details: [
+            "Software and hardware design for visible light communication systems (VLC systems).",
+            "Dev tools: Android Studio, NodeJS, VueJS.",
+            "Programming languages: MatLab, Java, Python, and C++.",
+            "Research projects:",
+            "1. Application of Visible Light Communication Technology in Monitoring High-Risk Newborns;",
+            "2. SmaL: Smartphone Receiver for Coded Data via Light.",
+            "Publications: [1], and [2]."
+          ]
+        },
+        {
+          duration: "2019 – 2020",
+          position: "Automation Intern",
+          company: "Cassiano Antonio Moraes University Hospital (HUCAM)",
+          location: "Vitória, Brazil",
+          details: [
+            "Establishment of electronics for a supervisory system, data monitoring app, and creating technical documentation.",
+            "Embedded systems based on Raspberry Pi, Arduino, and ESP8266.",
+            "Real-time monitoring tool: Zabbix.",
+            "Programming languages: Python, Javascript, and C++.",
+            "Publications: [4]"
+          ]
+        },
+        {
+          duration: "2019",
+          position: "Scholar in educational programme",
+          company: "Tutorial Teaching Program (PET)",
+          location: "Vitória, Brazil",
+          details: [
+            "Software training, such as LaTex.",
+            "Research about embedded systems.",
+            "Production of scientific articles.",
+            "Embedded systems based on Raspberry Pi and Arduino;",
+            "Programming languages: MatLab, Python and C/C++.",
+            "Publications: [3]"
+          ]
+        },
       ]
     };
   }
