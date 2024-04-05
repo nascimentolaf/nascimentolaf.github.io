@@ -1,6 +1,6 @@
-# Welcome to my GitHub Pages (alafSantos.github.io)
-This repository was created to host some personal projects, and currently I've uploaded here my personal page containing my CVs and resumes in different languages.
+# Welcome to my GitHub Pages ([dnsalaf.github.io](https://dnsalaf.github.io/))
+This repository was created to host some personal projects, and currently, I've uploaded here my personal page containing my CVs and resumes in different languages.
 
-For the design of the mentioned personal page, I used Vue.js and Quasar framework.
+I used Vue.js and Quasar framework to design the mentioned personal page.
 
 Feel free to read my resumes and propose me projects that you might be developing and think I could help or work together.
