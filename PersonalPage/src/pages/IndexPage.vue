@@ -10,8 +10,8 @@
 
           <div class="text">
             <p class="responsive-text">{{ me }}</p>
-            <p class="responsive-text2">{{ field }}</p>
             <p class="responsive-text2">{{ degree }}</p>
+            <p class="responsive-text2">{{ field }}</p>
 
           </div>
         </div>
@@ -22,12 +22,31 @@
             <p>About me</p>
           </b>
           <hr>
-          Passionate master's student in electrical engineering with a background in telecommunications and automation,
-          holding a history of presenting at conferences and writting research papers, principally in the area of the
-          Internet of Things (IoT). Throughout my career I have received awards in maths, physics and recently a
-          scholarship based on academic and technical excellence. I am currently seeking a Ph.D. programme in
-          Engineering
-          aiming to delve further into the IoT world and Digital Twins.
+          Passionate PhD student, doing research in the areas of critical systems and mobile networks.
+          With a background in electronics and telecommunications, I hold a bachelor's degree in Electrical Engineering
+          from the Federal University of Espirito Santo (UFES, ES - Brazil), a double diploma in Computer Engineering
+          from Telecom Paris (Palaiseau, France), and a master's degree in embedded systems and information processing
+          from the Institut Polytechnique de Paris (Palaiseau, France).
+          <br>
+          I completed the first year of his master’s degree focusing on Embedded Systems, Mobile Networks, and the
+          Internet of Things (IoT).
+          Over a summer internship in 2023, I was part of the control and acquisition engineering team at SOLEIL, a
+          synchrotron facility near Paris, working on a project dedicated to the centralized supervision of industrial
+          programmable logic controllers (PLCs).
+          Afterward, I pursued a Master 2 in Embedded Systems and Information Processing (M2 SETI), completing my degree
+          with an end-of-studies project at Orange SA, focusing on remote access to Matter IoT devices.
+          <br>
+          As an Electrical Engineering student in Brazil at the Federal University of Espírito Santo (UFES), I was in
+          the Telecommunications Laboratory (LabTel) research team, where I developed my bachelor’s final project titled
+          ‘Multiplatform System for Data Reception via Visible Light Communication Technology’.
+          At LabTel, I engaged in several research projects in Visible Light Communications.
+          <br>
+          Additionally, I worked as an Automation Intern at the Cassiano Antonio Moraes University Hospital (HUCAM) and
+          as an Embedded Systems and IoT R&D intern at 2Solve Engineering and Technology.
+          During my undergraduate studies, I participated in various projects and organizations, including the Museum of
+          Life Sciences, the Academic Center of Electrical Engineering, and the Tutorial Education Program.
+
+
 
           <br><br>
           <b>
@@ -211,9 +230,9 @@ export default defineComponent({
   data() {
     return {
       title: "IoT and Embedded Systems Engineer",
-      me: "Alaf DO NASCIMENTO SANTOS",
+      me: "Alaf D. N. SANTOS",
+      degree: "PhD Student at Institut Polytechnique de Paris",
       field: "Electronics and Telecommunications Engineering",
-      degree: "Master in Embedded Systems and Information Processing",
       pubs: [
         "ZWAAG, K., ROCHA, H., SEGATTO, M., BASTOS, T., SILVA, J., SANTOS, F., SANTOS, A. et al., 2021. Performance Evaluation of an OOK - Based Visible Light Communication System for Transmission of Patient Monitoring Data.IFMBE Proceedings.",
         "SANTOS, A., ROCHA, H., SEGATTO, M., BASTOS, T., SILVA, J., ZWAAG, K.et al., 2020. Application of Visible Light Communication Technology for Monitoring in Hospitals.Brazilian Congress on Biomedical Engineering.",
@@ -231,9 +250,17 @@ export default defineComponent({
       ],
       education: [
         {
+          duration: "2024 – 2027",
+          degree: "Doctor of Philosophy (PhD) in Engineering",
+          institution: "Institut Polytechnique de Paris, Palaiseau, France.",
+          details: [
+            "Research Subject: Real-time scheduling for 5G NR SCADA systems."
+          ]
+        },
+        {
           duration: "2022 – 2024",
-          degree: "Master of Science in Engineering",
-          institution: "Télécom Paris, Polytechnic Institute of Paris, Palaiseau, France. Double degree programme.",
+          degree: "Master of Science (MSc) in Engineering",
+          institution: "Télécom Paris, Institut Polytechnique de Paris, Palaiseau, France. Double degree programme.",
           details: [
             "M1: Embedded systems, mobile networks, and the internet of things.",
             "M2: Embedded systems and information processing.",
@@ -242,7 +269,7 @@ export default defineComponent({
         },
         {
           duration: "2017 – 2024",
-          degree: "Bachelor of Science in Electrical Engineering",
+          degree: "Bachelor of Science (BSc) in Electrical Engineering",
           institution: "Federal University of Espírito Santo, Vitória, Brazil. Double degree programme.",
           details: [
             "Control and automation systems, telecommunications, and computer science.",
@@ -251,6 +278,16 @@ export default defineComponent({
         }
       ],
       experience: [
+        {
+          duration: "2024",
+          position: "NAI Project (PEPR 5G) Researcher",
+          company: "LTCI, Telecom Paris",
+          location: "Palaiseau, France",
+          details: [
+            "Research on the real-time aspects of URLLC in 5G, mainly the application of critical systems task scheduling algorithms.",
+            "Teaching activities on Embedded Systems and Mobile Networks."
+          ]
+        },
         {
           duration: "2024",
           position: "Embedded Systems and IoT Intern.",
@@ -279,12 +316,12 @@ export default defineComponent({
           company: "2Solve Engineering and Technology",
           location: "Vitória - ES, Brazil",
           details: [
-          "Development of software for embedded systems, IoT Web Applications, and technical documentation.",
-          "Embedded systems based on Raspberry Pi and SAMD21.",
-          "Programming languages: Javascript, Python, C/C++, and CMake.",
-          "Dev tools: NodeJS, AngularJS, InfluxDB, and MongoDB.",
-          "IoT tools: Node-RED and Grafana.",
-          "Research project: Design of an OOK transmitter for short-link visible light data communication."
+            "Development of software for embedded systems, IoT Web Applications, and technical documentation.",
+            "Embedded systems based on Raspberry Pi and SAMD21.",
+            "Programming languages: Javascript, Python, C/C++, and CMake.",
+            "Dev tools: NodeJS, AngularJS, InfluxDB, and MongoDB.",
+            "IoT tools: Node-RED and Grafana.",
+            "Research project: Design of an OOK transmitter for short-link visible light data communication."
           ]
         },
         {

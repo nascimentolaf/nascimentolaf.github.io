@@ -97,7 +97,7 @@
     name: 'IndexPage',
     data() {
       return {
-        me: "Alaf DO NASCIMENTO SANTOS",
+        me: "Alaf D. N. SANTOS",
         title: "Master of Science in Engineering - Institut Polytechnique de Paris"
       };
     }
