@@ -103,13 +103,13 @@
             <p>Volunteering</p>
           </b>
           <hr>
-          2018 – 2019 - Activity Manager.
-          Academic Center of UFES Electrical Engineering, Vitória, Brazil.
+          2018 – 2019 - Activity Manager.<br>
+          Academic Center of UFES Electrical Engineering, Vitória, Brazil.<br>
           Organization of welcome events for freshmen, organization of lectures on subjects of interest to graduation,
           promotion of sports events, electrical engineering custom t-shirts selling, maintenance of the study room.
-          <br>
-          2018 - Museum Mediator.
-          UFES Museum of Life Sciences, Vitória, Brazil.
+          <br><br>
+          2018 - Museum Mediator.<br>
+          UFES Museum of Life Sciences, Vitória, Brazil.<br>
           Introduce the museum to visitors, control the flow of people, and pass safety guidelines.
 
 
@@ -118,21 +118,31 @@
             <p>Honours and Awards</p>
           </b>
           <hr>
-          2022 – 2024 - BRAFITEC scholarship.
-          CAPES Foundation, Brazil.
+
+          2025 - Honorable Mention, Find Me on the Moon: NASA Lunar Navigation Challenge.
+          National Aeronautics and Space Administration (NASA), USA.
+          Selene Squad: rover designed for navigating, mapping, and characterizing the Shackleton Crater.<a
+            href="https://www.freelancer.com/community/articles/find-me-on-the-moon-nasa-lunar-navigation-challenge-winners-announced">Winners
+            Announcement</a>.
+
+
+          <br><br>
+          2022 – 2024 - BRAFITEC scholarship.<br>
+          CAPES Foundation, Brazil.<br>
           Master's degree funding granted based on criteria of academic and technical excellence.
 
-          <br>
-          2016 - Honorable Mention Brazilian Public School Mathematics Olympiad.
-          Institute of Pure and Applied Mathematics (IMPA), Rio de Janeiro, Brazil.
+          <br><br>
+          2016 - Honorable Mention Brazilian Public School Mathematics Olympiad.<br>
+          Institute of Pure and Applied Mathematics (IMPA), Rio de Janeiro, Brazil.<br>
           Stood out in mathematics at this Olympiad, being the only high school student out of around 500 in the school
           to
           receive this award.
 
-          <br>
-          2015 – 2016 - Outstanding certificate at the São João Batista School Science Fair.
-          EEEFM São João Batista (High School), Cariacica, Brazil.
-          2016 (1st place) - Physics project involving basic concepts of electromagnetism to wirelessly turn on lamps.
+          <br><br>
+          2015 – 2016 - Outstanding certificate at the São João Batista School Science Fair.<br>
+          EEEFM São João Batista (High School), Cariacica, Brazil.<br>
+          2016 (1st place) - Physics project involving basic concepts of electromagnetism to wirelessly turn on
+          lamps.<br>
           2015 (2nd place) - Tesla coil capable of creating electric arcs of a few centimeters.
 
 
@@ -142,9 +152,10 @@
           </b>
           <hr>
           Portuguese - Native Language.<br>
-          English - C1, 2024. Cambridge Linguaskill B2 (178 out of 180), 2022.<br>
-          French - C1, 2024. Test de Connaissance du Français B2 (488 out of 699), 2021.<br>
-          Spanish - A2, 2024.
+          English - Advanced (C1, 2024). Cambridge Linguaskill B2 (178 out of 180), 2022.<br>
+          French - Advanced (C1, 2024). Test de Connaissance du Français B2 (488 out of 699), 2021.<br>
+          Spanish - Intermediate (B1, 2024).<br>
+          Italian & Galician: Basic knowledge.
 
         </div>
 
@@ -230,9 +241,9 @@ export default defineComponent({
   data() {
     return {
       title: "IoT and Embedded Systems Engineer",
-      me: "Alaf D. N. SANTOS",
-      degree: "PhD Student at Institut Polytechnique de Paris",
-      field: "Electronics and Telecommunications Engineering",
+      me: "Alaf Nascimento",
+      degree: "IPP PhD Student at Télécom Paris",
+      field: "Computer Science and Telecommunications Engineering",
       pubs: [
         "ZWAAG, K., ROCHA, H., SEGATTO, M., BASTOS, T., SILVA, J., SANTOS, F., SANTOS, A. et al., 2021. Performance Evaluation of an OOK - Based Visible Light Communication System for Transmission of Patient Monitoring Data.IFMBE Proceedings.",
         "SANTOS, A., ROCHA, H., SEGATTO, M., BASTOS, T., SILVA, J., ZWAAG, K.et al., 2020. Application of Visible Light Communication Technology for Monitoring in Hospitals.Brazilian Congress on Biomedical Engineering.",

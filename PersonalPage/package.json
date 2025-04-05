@@ -2,8 +2,8 @@
   "name": "cv",
   "version": "0.0.1",
   "description": "Personal CVs and Resumes",
-  "productName": "DNS Alaf",
-  "author": "alafSantos <alaf.ns4@gmail.com>",
+  "productName": "Nascimento Alaf",
+  "author": "dnsalaf <alaf.dns.me@gmail.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
