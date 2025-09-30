@@ -2,22 +2,28 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
-        <q-toolbar-title>
-          Personal Page
-        </q-toolbar-title>
-
+        <q-toolbar-title> Personal Page </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header>
-          For more information
-        </q-item-label>
+        <q-item-label header> For more information </q-item-label>
 
-        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -28,59 +34,59 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { defineComponent, ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: 'Home',
-    icon: 'home',
-    link: '/#/'
+    title: "Home",
+    icon: "home",
+    link: "/#/",
   },
   {
-    title: 'CV',
-    icon: 'school',
-    link: '/#/CV'
+    title: "CV",
+    icon: "school",
+    link: "/#/CV",
   },
   {
-    title: 'Linkedin',
-    icon: 'chat',
-    link: 'https://www.linkedin.com/in/dnsalaf'
+    title: "Linkedin",
+    icon: "chat",
+    link: "https://www.linkedin.com/in/nascimentolaf",
   },
   {
-    title: 'Github',
-    icon: 'code',
-    link: 'https://github.com/dnsalaf'
+    title: "Github",
+    icon: "code",
+    link: "https://github.com/nascimentolaf",
   },
   {
-    title: 'ORCID',
-    icon: 'record_voice_over',
-    link: 'https://orcid.org/0000-0002-5469-3872'
+    title: "ORCID",
+    icon: "record_voice_over",
+    link: "https://orcid.org/0000-0002-5469-3872",
   },
   {
-    title: 'Lattes Curriculum',
-    icon: 'info',
-    link: 'http://lattes.cnpq.br/4461462146153067'
-  }
-]
+    title: "Lattes Curriculum",
+    icon: "info",
+    link: "http://lattes.cnpq.br/4461462146153067",
+  },
+];
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   setup() {
-    const leftDrawerOpen = ref(false)
+    const leftDrawerOpen = ref(false);
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+});
 </script>
