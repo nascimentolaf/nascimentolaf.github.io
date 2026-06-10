@@ -68,6 +68,11 @@ const linksList = [
     icon: "info",
     link: "http://lattes.cnpq.br/4461462146153067",
   },
+  {
+    title: "Artist's Life",
+    icon: "brush",
+    link: "/#/ArtistLife",
+  },
 ];
 
 export default defineComponent({
